@@ -37,5 +37,11 @@ console.log(ndate.getDay() +1); // used to get the day in number only ; 0--> Sun
 console.log(ndate.getMonth()+1); // to make it user friendly : we add +1 : 0--> jan , 1 --> Feb and so on .. 
 
 // Now these seperated values can be used to represent the date in the format we want like dd/mm/yy or nay other by using  String Interpolation.. i.e ` ` and ${variable}
-`The date is ${ndate.getDate()} and the month is ${ndate.getMonth()} and the year followed by day is $${ndate.getDay()}`
+console.log(`The date is ${ndate.getDate()} and the month is ${ndate.getMonth()} and the year followed by day is ${ndate.getDay()}`
+);
 
+// customization in object ndate
+ndate.toLocaleString('default',
+    {
+        weekday: 'long',
+})
